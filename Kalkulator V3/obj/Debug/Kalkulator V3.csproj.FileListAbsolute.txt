@@ -1,0 +1,10 @@
+C:\Users\kaje-\source\repos\Kalkulator V3\Kalkulator V3\obj\Debug\Kalkulator V3.csprojAssemblyReference.cache
+C:\Users\kaje-\source\repos\Kalkulator V3\Kalkulator V3\obj\Debug\Kalkulator_V3.Properties.Resources.resources
+C:\Users\kaje-\source\repos\Kalkulator V3\Kalkulator V3\obj\Debug\Kalkulator V3.csproj.GenerateResource.cache
+C:\Users\kaje-\source\repos\Kalkulator V3\Kalkulator V3\obj\Debug\Kalkulator V3.csproj.CoreCompileInputs.cache
+C:\Users\kaje-\source\repos\Kalkulator V3\Kalkulator V3\obj\Debug\Kalkulator_V3.Form1.resources
+C:\Users\kaje-\source\repos\Kalkulator V3\Kalkulator V3\bin\Debug\Kalkulator V3.exe.config
+C:\Users\kaje-\source\repos\Kalkulator V3\Kalkulator V3\bin\Debug\Kalkulator V3.exe
+C:\Users\kaje-\source\repos\Kalkulator V3\Kalkulator V3\bin\Debug\Kalkulator V3.pdb
+C:\Users\kaje-\source\repos\Kalkulator V3\Kalkulator V3\obj\Debug\Kalkulator V3.exe
+C:\Users\kaje-\source\repos\Kalkulator V3\Kalkulator V3\obj\Debug\Kalkulator V3.pdb
