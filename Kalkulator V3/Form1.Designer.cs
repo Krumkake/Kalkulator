@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnEndreFortegn = new System.Windows.Forms.Button();
-            this.btnInvers = new System.Windows.Forms.Button();
             this.btnSlettTilbake = new System.Windows.Forms.Button();
             this.btnSquareXY = new System.Windows.Forms.Button();
             this.btnSquareRoot = new System.Windows.Forms.Button();
@@ -65,15 +64,6 @@
             this.btnEndreFortegn.UseVisualStyleBackColor = true;
             this.btnEndreFortegn.Click += new System.EventHandler(this.BtnEndreFortegn_Click);
             // 
-            // btnInvers
-            // 
-            this.btnInvers.Location = new System.Drawing.Point(502, 354);
-            this.btnInvers.Name = "btnInvers";
-            this.btnInvers.Size = new System.Drawing.Size(60, 60);
-            this.btnInvers.TabIndex = 46;
-            this.btnInvers.Text = "1^x";
-            this.btnInvers.UseVisualStyleBackColor = true;
-            // 
             // btnSlettTilbake
             // 
             this.btnSlettTilbake.Location = new System.Drawing.Point(436, 90);
@@ -98,7 +88,7 @@
             // btnSquareRoot
             // 
             this.btnSquareRoot.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.btnSquareRoot.Location = new System.Drawing.Point(502, 222);
+            this.btnSquareRoot.Location = new System.Drawing.Point(370, 90);
             this.btnSquareRoot.Name = "btnSquareRoot";
             this.btnSquareRoot.Size = new System.Drawing.Size(60, 60);
             this.btnSquareRoot.TabIndex = 43;
@@ -109,7 +99,7 @@
             // bntSqr
             // 
             this.bntSqr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.2F);
-            this.bntSqr.Location = new System.Drawing.Point(502, 156);
+            this.bntSqr.Location = new System.Drawing.Point(502, 354);
             this.bntSqr.Name = "bntSqr";
             this.bntSqr.Size = new System.Drawing.Size(60, 60);
             this.bntSqr.TabIndex = 42;
@@ -131,7 +121,7 @@
             // display
             // 
             this.display.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.display.Location = new System.Drawing.Point(238, 37);
+            this.display.Location = new System.Drawing.Point(238, 39);
             this.display.Name = "display";
             this.display.Size = new System.Drawing.Size(324, 45);
             this.display.TabIndex = 39;
@@ -143,7 +133,7 @@
             this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnC.Location = new System.Drawing.Point(238, 90);
             this.btnC.Name = "btnC";
-            this.btnC.Size = new System.Drawing.Size(60, 60);
+            this.btnC.Size = new System.Drawing.Size(126, 60);
             this.btnC.TabIndex = 40;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
@@ -152,7 +142,7 @@
             // btnDivi
             // 
             this.btnDivi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDivi.Location = new System.Drawing.Point(304, 90);
+            this.btnDivi.Location = new System.Drawing.Point(502, 156);
             this.btnDivi.Name = "btnDivi";
             this.btnDivi.Size = new System.Drawing.Size(60, 60);
             this.btnDivi.TabIndex = 38;
@@ -163,7 +153,7 @@
             // btnMulti
             // 
             this.btnMulti.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMulti.Location = new System.Drawing.Point(370, 90);
+            this.btnMulti.Location = new System.Drawing.Point(502, 222);
             this.btnMulti.Name = "btnMulti";
             this.btnMulti.Size = new System.Drawing.Size(60, 60);
             this.btnMulti.TabIndex = 37;
@@ -317,7 +307,7 @@
             // inputHistory
             // 
             this.inputHistory.AutoSize = true;
-            this.inputHistory.Location = new System.Drawing.Point(89, 64);
+            this.inputHistory.Location = new System.Drawing.Point(235, 19);
             this.inputHistory.Name = "inputHistory";
             this.inputHistory.Size = new System.Drawing.Size(16, 17);
             this.inputHistory.TabIndex = 48;
@@ -330,7 +320,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.inputHistory);
             this.Controls.Add(this.btnEndreFortegn);
-            this.Controls.Add(this.btnInvers);
             this.Controls.Add(this.btnSlettTilbake);
             this.Controls.Add(this.btnSquareXY);
             this.Controls.Add(this.btnSquareRoot);
@@ -365,7 +354,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnEndreFortegn;
-        private System.Windows.Forms.Button btnInvers;
         private System.Windows.Forms.Button btnSlettTilbake;
         private System.Windows.Forms.Button btnSquareXY;
         private System.Windows.Forms.Button btnSquareRoot;

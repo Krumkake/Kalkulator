@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
+//Keyboard kontroller: ElikKnapp = O på tastaturet. Resten er bundet til numPaden
 namespace Kalkulator_V3
 {
     public partial class Form1 : Form
@@ -17,23 +17,20 @@ namespace Kalkulator_V3
         {
             InitializeComponent();
         }
-
         #region variabler
-
         double tall1 = 0;
         double tall2 = 0;
         double y;
         string regneOp = "";
-
         #endregion
         #region tall- og skriveknapper
-        private void BtnC_Click(object sender, EventArgs e)
+        private void BtnC_Click(object sender, EventArgs e) //reset knapp
         {
             display.Text = "0";
             tall1 = 0;
             inputHistory.Text = "0";
         }
-        private void BtnSlettTilbake_Click(object sender, EventArgs e)
+        private void BtnSlettTilbake_Click(object sender, EventArgs e) //slettetilbake knapp
         {
             if (display.Text.Length == 1)
             {
@@ -47,24 +44,27 @@ namespace Kalkulator_V3
             {
                 inputHistory.Text = "0";
             }
-            else if ("+-*/".IndexOf(inputHistory.Text[inputHistory.Text.Length - 1]) == -1)
+            else if ("+-*/²^".IndexOf(inputHistory.Text[inputHistory.Text.Length - 1]) == -1) //gjør at man ikke kan slette den siste operatoren fra inputHistory labelen
             {
                 inputHistory.Text = inputHistory.Text.Remove(inputHistory.Text.Length - 1, 1);
             }
-
-            
+            if (display.Text == "-")
+            {
+                display.Text = "0";
+                inputHistory.Text = display.Text;
+            }
         }
         private void BtnComma_Click(object sender, EventArgs e)
         {
             if (!display.Text.Contains(","))
             {
                 display.Text += btnComma.Text;
+                inputHistory.Text += btnComma.Text;
             }
         }
-        private void btnTall_click(object sender, EventArgs e)
+        private void btnTall_click(object sender, EventArgs e) //gruppe med alle tallknapper
         {
             Button b = sender as Button;
-
             if (display.Text == "0")
             {
                 display.Text = "";
@@ -78,16 +78,13 @@ namespace Kalkulator_V3
         }
         #endregion
         #region regneknapper
-        private void AddSubDivMulOperasjoner(object sender, EventArgs e)
+        private void AddSubDivMulOperasjoner(object sender, EventArgs e) //gruppe med plus, minus, gange og dele
         {
             Button b = sender as Button;
             tall1 = Double.Parse(display.Text);
+            inputHistory.Text = display.Text + b.Text;
             display.Text = "0";
             regneOp = b.Text;
-            if (!inputHistory.Text.Contains(b.Text))
-            {
-                inputHistory.Text += b.Text;
-            }
         }
         private void BtnEndreFortegn_Click(object sender, EventArgs e)
         {
@@ -97,7 +94,6 @@ namespace Kalkulator_V3
         }
         private void BtnErLik_Click(object sender, EventArgs e)
         {
-            double tall2;
             tall2 = Double.Parse(display.Text);
             if (regneOp == "+")
             {
@@ -113,9 +109,6 @@ namespace Kalkulator_V3
             {
                 double sum = tall1 * tall2;
                 display.Text = sum.ToString();
-                display.Text = sum.ToString();
-                display.Text = sum.ToString();
-                display.Text = sum.ToString();
             }
             if (regneOp == "/")
             {
@@ -128,40 +121,40 @@ namespace Kalkulator_V3
                 tall2 = Math.Pow(tall1, tall2);
                 display.Text = tall2.ToString();
             }
+            tall1 = tall2;
             inputHistory.Text = display.Text;
         }
-
         private void BntSqr_Click(object sender, EventArgs e)
         {
             double tall2 = Convert.ToDouble(display.Text);
             tall2 = Math.Pow(tall2, 2);
             display.Text = tall2.ToString();
+            inputHistory.Text = display.Text;
         }
-
         private void BtnSquareRoot_Click(object sender, EventArgs e)
         {
             double tall2 = Convert.ToDouble(display.Text);
             tall2 = Math.Sqrt(tall2);
             display.Text = tall2.ToString();
+            inputHistory.Text = display.Text;
         }
-
         private void BtnSquareXY_Click(object sender, EventArgs e)
         {
             tall1 = Convert.ToDouble(display.Text);
+            inputHistory.Text = display.Text + "^";
             display.Text = "0";
             regneOp = "x^y";
-            inputHistory.Text += "^";
         }
         #endregion
         #region keyboard
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void Form1_KeyDown(object sender, KeyEventArgs e) //keyboard konfigurasjon
         {
             switch (e.KeyCode)
             {
                 case Keys.Back:
                     btnSlettTilbake.PerformClick();
                     break;
-                case Keys.D0:
+                case Keys.NumPad0:
                     btn0.PerformClick();
                     break;
                 case Keys.NumPad1:
@@ -190,6 +183,9 @@ namespace Kalkulator_V3
                     break;
                 case Keys.NumPad9:
                     btn9.PerformClick();
+                    break;
+                case Keys.Decimal:
+                    btnComma.PerformClick();
                     break;
                 case Keys.Add:
                     btnPluss.PerformClick();
